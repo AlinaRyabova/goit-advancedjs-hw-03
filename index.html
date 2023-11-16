@@ -3,15 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/cssloaders@1.0.0/dist/css/loaders.css"
+    />
+    
     <title>Homework 10</title>
     <script type="module" crossorigin src="/goit-advancedjs-hw-03/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-03/assets/vendor-a61d8330.js">
+    <link rel="stylesheet" href="/goit-advancedjs-hw-03/assets/index-e6b48480.css">
   </head>
   <body>
-    <select class="breed-select"></select>
+    <form class="search-form">
+      <select class="breed-select" id="breedSelect"></select>
+    </form>
     <p class="loader">Loading data, please wait...</p>
     <p class="error">Oops! Something went wrong! Try reloading the page!</p>
     <div class="cat-info"></div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
     
   </body>
 </html>
