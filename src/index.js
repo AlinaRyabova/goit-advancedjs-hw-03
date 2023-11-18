@@ -1,4 +1,6 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 document.addEventListener('DOMContentLoaded', () => {
   const breedSelect = document.querySelector('.breed-select');
@@ -21,6 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => {
       errorElement.style.display = 'block';
       loader.style.display = 'none';
+
+      iziToast.error({
+        title: 'Error',
+        message: 'Unable to upload cat information',
+      });
     });
 
   breedSelect.addEventListener('change', () => {
@@ -46,6 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(error => {
         errorElement.style.display = 'block';
+
+        iziToast.error({
+          title: 'Error',
+          message: 'Unable to upload cat information',
+        });
       })
       .finally(() => {
         loader.style.display = 'none';
